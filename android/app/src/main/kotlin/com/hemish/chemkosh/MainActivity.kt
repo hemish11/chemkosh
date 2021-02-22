@@ -1,4 +1,4 @@
-package com.example.chemkosh
+package com.hemish.chemkosh
 
 import io.flutter.embedding.android.FlutterActivity
 
