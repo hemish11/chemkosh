@@ -17,9 +17,9 @@ class _ResultState extends State<Result> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Center(
-      child: widget.data != null
-          ? Padding(
+    return widget.data != null
+        ? Center(
+            child: Padding(
               padding: EdgeInsets.symmetric(horizontal: size.width * 0.05),
               child: Expanded(
                 child: Container(
@@ -43,7 +43,7 @@ class _ResultState extends State<Result> {
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(15),
                             child: Image.network(
-                              'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/${Uri.encodeComponent(widget.title)}/PNG',
+                              'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/${Uri.encodeComponent(widget.title)}/PNG',
                             ),
                           ),
                         ),
@@ -84,12 +84,16 @@ class _ResultState extends State<Result> {
                   ),
                 ),
               ),
-            )
-          : Text(
-              'You have not searched\nanything yet',
-              style: TextStyle(fontSize: 26),
-              textAlign: TextAlign.center,
             ),
-    );
+          )
+        : Expanded(
+            child: Center(
+              child: Text(
+                'You have not searched\nanything yet',
+                style: TextStyle(fontSize: 26),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
   }
 }

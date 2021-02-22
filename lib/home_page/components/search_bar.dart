@@ -40,7 +40,7 @@ class SearchBar extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: TextField(
-                        decoration: InputDecoration(border: InputBorder.none, hintText: 'Search'),
+                        decoration: InputDecoration(border: InputBorder.none, hintText: 'Search (SMILES Format)'),
                         style: TextStyle(fontSize: 20),
                         cursorColor: CustomColors.primaryColor,
                         onChanged: onChanged,

@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   String title;
 
   String url =
-      'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/name/input/property/ExactMass,MolecularFormula,HBondDonorCount,HBondAcceptorCount,IUPACName,HeavyAtomCount,IsotopeAtomCount,RotatableBondCount/JSON';
+      'https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/smiles/input/property/ExactMass,MolecularFormula,HBondDonorCount,HBondAcceptorCount,IUPACName,HeavyAtomCount,IsotopeAtomCount,RotatableBondCount/JSON';
 
   @override
   Widget build(BuildContext context) {
